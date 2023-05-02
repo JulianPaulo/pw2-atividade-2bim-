@@ -1,7 +1,7 @@
 public class Usuario {
     private String codigo;
     private String nome;
-    private Double senha;
+    private String senha;
     private int tentativasDeAcesso;
     private boolean primeiroAcesso;
     private String dataDeInativacao;
@@ -23,11 +23,11 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public Double getSenha() {
+    public String getSenha() {
         return senha;
     }
 
-    public void setSenha(Double senha) {
+    public void setSenha(String senha) {
         this.senha = senha;
     }
 
@@ -63,14 +63,8 @@ public class Usuario {
         this.status = status;
     }
 
-    void usuario(String nome){
-        if(nome != null)
-            this.codigo = "pintoDoGrau";
-            this.tentativasDeAcesso = 1;
-            this.status = StatusUsuarioEnum.ATIVO;
-            System.out.println("Senha Padrão: " + codigo);
-            System.out.println("Status: " + status);
-
+    Usuario(){
+       senha = "etec#123";
     }
 
 }
